@@ -1,0 +1,28 @@
+﻿@model Minesweeper.API.Models.GameBoard
+
+<div id="game-board-container">
+    <div id="status-alert"></div>
+    <div class="game-info">
+        <p>Mines left: @Model.MinesLeft</p>
+    </div>
+    <table id="game-board" class="game-board">
+        <tbody id="game-board-body">
+            @for (int i = 0; i < Model.Grid.Count; i++)
+            {
+                <tr>
+                    @for (int j = 0; j < Model.Grid[i].Count; j++)
+                    {
+                        var cell = Model.Grid[i][j];
+                        <td class="cell row-@i col-@j 
+                            @(cell.IsRevealed ? "revealed" : "") 
+                            @(cell.IsFlagged ? "flagged" : "")
+                            @(cell.IsQuestioned ? "questioned" : "")"
+                        >
+                            @cell.Display
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
