@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\tests\Minesweeper.Tests\Minesweeper.Tests.csproj" />
+    <ProjectReference Include="..\Minesweeper.Core\Minesweeper.Core.csproj" />
+    <ProjectReference Include="..\Minesweeper.Infrastructure\Minesweeper.Infrastructure.csproj" />
+    <ProjectReference Include="..\Minesweeper.Persistence\Minesweeper.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

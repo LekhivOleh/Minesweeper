@@ -1,0 +1,85 @@
+html {
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+.minesweeper-title {
+    width: fit-content;
+    font-size: 2rem;
+    margin: 20px auto;
+}
+
+.game-board {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.cell.revealed {
+    background-color: #ddd;
+    cursor: default;
+}
+
+.cell.flagged {
+    background-color: #fdd;
+}
+
+.cell.questioned {
+    background-color: #ff0;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
+    text-align: center;
+    margin: 10px auto;
+}

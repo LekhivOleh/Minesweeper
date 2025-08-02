@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Tests", "tests\Minesweeper.Tests\Minesweeper.Tests.csproj", "{BB4AB0F1-24A6-AB8D-7191-E32597BE5FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Infrastructure", "src\Minesweeper.Infrastructure\Minesweeper.Infrastructure.csproj", "{60271559-8B10-41D9-99B0-53D6E8799684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.API", "src\Minesweeper.API\Minesweeper.API.csproj", "{3B944F07-2B26-47A8-9C49-87EBAAB5BF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Persistence", "src\Minesweeper.Persistence\Minesweeper.Persistence.csproj", "{C3AFAB57-7854-458E-A2C8-175460F72992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Core", "src\Minesweeper.Core\Minesweeper.Core.csproj", "{E2F3A235-7CF6-44AE-A795-23CF960C6442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Web", "src\Minesweeper.Web\Minesweeper.Web.csproj", "{93427910-CE2E-4C0C-B710-255FF6301C86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{836717A0-6040-9025-127E-EAB68F727B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836717A0-6040-9025-127E-EAB68F727B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836717A0-6040-9025-127E-EAB68F727B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836717A0-6040-9025-127E-EAB68F727B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB4AB0F1-24A6-AB8D-7191-E32597BE5FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB4AB0F1-24A6-AB8D-7191-E32597BE5FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB4AB0F1-24A6-AB8D-7191-E32597BE5FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB4AB0F1-24A6-AB8D-7191-E32597BE5FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60271559-8B10-41D9-99B0-53D6E8799684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60271559-8B10-41D9-99B0-53D6E8799684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60271559-8B10-41D9-99B0-53D6E8799684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60271559-8B10-41D9-99B0-53D6E8799684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B944F07-2B26-47A8-9C49-87EBAAB5BF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B944F07-2B26-47A8-9C49-87EBAAB5BF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B944F07-2B26-47A8-9C49-87EBAAB5BF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B944F07-2B26-47A8-9C49-87EBAAB5BF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3AFAB57-7854-458E-A2C8-175460F72992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3AFAB57-7854-458E-A2C8-175460F72992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3AFAB57-7854-458E-A2C8-175460F72992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3AFAB57-7854-458E-A2C8-175460F72992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F3A235-7CF6-44AE-A795-23CF960C6442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F3A235-7CF6-44AE-A795-23CF960C6442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F3A235-7CF6-44AE-A795-23CF960C6442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F3A235-7CF6-44AE-A795-23CF960C6442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93427910-CE2E-4C0C-B710-255FF6301C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93427910-CE2E-4C0C-B710-255FF6301C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93427910-CE2E-4C0C-B710-255FF6301C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93427910-CE2E-4C0C-B710-255FF6301C86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DBEFB17-B0A5-46F4-B4AB-444555FF7894}
+	EndGlobalSection
+EndGlobal

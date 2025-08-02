@@ -1,0 +1,11 @@
+﻿@model Minesweeper.Core.Models.GameBoard
+
+
+@if (Model.IsGameOver && !Model.IsWin)
+{
+    <div class="alert alert-danger">Game Over! You hit a mine.</div>
+}
+@if (Model.IsWin)
+{
+    <div class="alert alert-success">Congratulations! You win!.</div>
+}
