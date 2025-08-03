@@ -1,11 +1,20 @@
 ﻿@model Minesweeper.Core.Models.GameBoard
 
-
 @if (Model.IsGameOver && !Model.IsWin)
 {
-    <div class="alert alert-danger">Game Over! You hit a mine.</div>
+    <div class="alert alert-danger">
+        <p class="alert-lose-message">You hit a mine! Game over!</p>
+        <form asp-controller="Game" asp-action="Index" method="get">
+            <button type="submit" class="retry-button btn btn-primary">Retry🔄</button>
+        </form>
+    </div>
 }
 @if (Model.IsWin)
 {
-    <div class="alert alert-success">Congratulations! You win!.</div>
+    <div class="alert alert-success">
+        <p class="alert-win-message">Congratulations! You win!</p>
+        <form asp-controller="Game" asp-action="Index" method="get">
+            <button type="submit" class="retry-button btn btn-primary">Retry🔄</button>
+        </form>
+    </div>
 }

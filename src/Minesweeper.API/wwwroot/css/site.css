@@ -83,3 +83,10 @@ body {
     text-align: center;
     margin: 10px auto;
 }
+
+.alert {
+    display: flex;
+    flex-direction: row;
+    -webkit-justify-content: inherit;
+    justify-content: space-between;
+}
