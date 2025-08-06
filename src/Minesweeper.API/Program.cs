@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Minesweeper.Core.Interfaces.Repositories;
 using Minesweeper.Core.Interfaces.Services;
+using Minesweeper.Infrastructure.Repositories;
 using Minesweeper.Infrastructure.Services;
+using Minesweeper.Persistence;
+using Xunit.Sdk;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllersWithViews().AddRazorOptions(options =>
 {
@@ -11,6 +19,8 @@ builder.Services.AddControllersWithViews().AddRazorOptions(options =>
 });
 
 builder.Services.AddScoped<IMinesweeperService, MinesweeperService>();
+builder.Services.AddScoped<ILeaderboardRepository, LeaderboardRepository>();
+builder.Services.AddScoped<ILeaderboardService, LeaderboardService>();
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>

@@ -6,7 +6,7 @@ using Minesweeper.Core.Models;
 
 namespace Minesweeper.API.Controllers;
 
-public class GameController(IMinesweeperService minesweeperService) : Controller
+public class GameController(IMinesweeperService minesweeperService, ILeaderboardService leaderboardService) : Controller
 {
     private const string SessionKey = "GameBoard";
 
@@ -33,6 +33,24 @@ public class GameController(IMinesweeperService minesweeperService) : Controller
             board.IsWin = true;
             board.IsGameOver = true;
             HttpContext.Session.SetObject("GameBoard", board);
+
+            var startTimeStr = HttpContext.Session.GetString("GameStartTime");
+            TimeOnly bestTime = TimeOnly.MinValue;
+            if (DateTime.TryParse(startTimeStr, null, System.Globalization.DateTimeStyles.RoundtripKind, out var startTime))
+            {
+                var elapsed = DateTime.UtcNow - startTime;
+                bestTime = TimeOnly.FromTimeSpan(elapsed);
+            }
+            var username = "Anonymous"; // Replace with actual username logic
+
+            // Save to leaderboard
+            var entry = new LeaderboardEntry
+            {
+                Id = Guid.NewGuid(),
+                Username = username,
+                BestTime = bestTime
+            };
+            leaderboardService.AddAsync(entry);
         }
 
         return PartialView("_GameBoard", board);

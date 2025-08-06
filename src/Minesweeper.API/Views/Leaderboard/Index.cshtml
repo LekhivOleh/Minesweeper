@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Minesweeper.Core.Models.LeaderboardEntry>
+
+<h2>Leaderboard</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Best Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            int rank = 1;
+            foreach (var entry in Model)
+            {
+                <tr>
+                    <td>@rank</td>
+                    <td>@entry.Username</td>
+                    <td>@entry.BestTime.ToString("mm\\:ss")</td>
+                </tr>
+                rank++;
+            }
+        }
+    </tbody>
+</table>
